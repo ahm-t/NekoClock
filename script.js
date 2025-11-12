@@ -33,7 +33,7 @@ function updateDigit(elementId, newDigit, hasChanged) {
     const element = document.getElementById(elementId);
     if (!element) return;
     
-    element.style.backgroundImage = `url('images/${newDigit}.gif')`;
+    element.style.backgroundImage = `url('images/${newDigit}.png')`;
     
     if (hasChanged) {
         element.classList.add('changed');
@@ -63,7 +63,7 @@ function initClock() {
     const separator = document.getElementById('separator') || document.createElement('div');
     separator.className = 'digit';
     separator.id = 'separator';
-    separator.style.backgroundImage = "url('images/sep.gif')";
+    separator.style.backgroundImage = "url('images/sep.png')";
     document.querySelector('.clock').insertBefore(separator, document.getElementById('hour-ones').nextSibling);
 
     const now = new Date();
